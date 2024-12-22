@@ -60,7 +60,7 @@ public class ConfigDemoSecurity {
 	@Order(1)
 	public SecurityFilterChain oauthSecurityFilterChain(HttpSecurity security) throws Exception {
 
-		OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(security); // uses access token to client
+		OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(security); // gives access token to client
 		security.getConfigurer(OAuth2AuthorizationServerConfigurer.class).
 		authorizationEndpoint(
 		a -> a.authenticationProviders(getAuthorizationEndpointProviders())
